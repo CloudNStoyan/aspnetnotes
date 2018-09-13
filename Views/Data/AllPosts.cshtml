@@ -1,0 +1,18 @@
+﻿@using WebApplication1.Controllers
+@model WebApplication1.Controllers.Note[]
+
+@{
+    ViewData["Title"] = "All Posts";
+    Layout = "~/Views/_layout.cshtml";
+}
+
+<h1>All posts</h1>
+<ul>
+    @foreach (var note in @Model)
+    {
+        <li>
+            <a href="/data/post/@note.Id">@note.Title</a>
+        </li>
+    }
+</ul>
+

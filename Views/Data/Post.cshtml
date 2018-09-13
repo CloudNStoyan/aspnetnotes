@@ -1,0 +1,12 @@
+﻿@model WebApplication1.Controllers.Note
+@{
+    ViewData["Title"] = "Post " + Model.Id;
+    Layout = "~/Views/_layout.cshtml";
+}
+
+<h1>This is post number: @Model.Id</h1>
+<div>
+    <h2>@Model.Title</h2>
+    <pre style="background-color: black; color: white">@Model.Content</pre>
+</div>
+
